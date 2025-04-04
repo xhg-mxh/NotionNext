@@ -247,8 +247,7 @@ const LayoutSearch = props => {
 const LayoutArchive = props => (
   <>
     {/* 博文列表 */}
-    <Blog {...props} posts={props.posts ? [...props.posts].reverse() : []} />
-
+    <LayoutPostList {...props} posts={props.posts ? [...props.posts].reverse() : []} />
   </>
 )
 
@@ -303,10 +302,20 @@ const Layout404 = props => {
  * 翻页博客列表
  */
 const LayoutPostList = props => {
-  const { posts: originalPosts, category, tag } = props
+  const { posts: originalPosts, category, tag, currentPage = 1, postsPerPage = 6 } = props
   const posts = originalPosts ? [...originalPosts].reverse() : []
-
+  
   const slotTitle = category || tag
+  const totalPosts = posts.length
+  const totalPages = Math.ceil(totalPosts / postsPerPage)
+
+  const handlePageChange = (page) => {
+    if (page < 1 || page > totalPages) return
+    // Update the current page in the URL or use router to push
+    // Use something like: router.push(`/posts?page=${page}`)
+  }
+
+  const displayedPosts = posts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage)
 
   return (
     <>
@@ -341,9 +350,9 @@ const LayoutPostList = props => {
               </div>
             </div>
           </div>
-          {/* 博客列表 此处优先展示3片文章 */}
+          {/* 博客列表 此处优先展示分页后的文章 */}
           <div className='-mx-4 flex flex-wrap'>
-            {posts?.map((item, index) => {
+            {displayedPosts?.map((item, index) => {
               return (
                 <div key={index} className='w-full px-4 md:w-1/2 lg:w-1/3'>
                   <div
@@ -378,12 +387,29 @@ const LayoutPostList = props => {
               )
             })}
           </div>
+          {/* 翻页按钮 */}
+          <div className="flex justify-center mt-6">
+            <button
+              className="px-4 py-2 bg-primary text-white rounded-md"
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage <= 1}>
+              Previous
+            </button>
+            <span className="mx-4">{currentPage} / {totalPages}</span>
+            <button
+              className="px-4 py-2 bg-primary text-white rounded-md"
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage >= totalPages}>
+              Next
+            </button>
+          </div>
         </div>
       </section>
       {/* <!-- ====== Blog Section End --> */}
     </>
   )
 }
+
 /**
  * 分类列表
  * @param {*} props
