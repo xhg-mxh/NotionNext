@@ -88,7 +88,7 @@ const LayoutBase = props => {
 const LayoutIndex = props => {
   const count = siteConfig('STARTER_BLOG_COUNT', 3, CONFIG)
   const { locale } = useGlobal()
-  const posts = props?.allNavPages ? props.allNavPages.slice(0, count) : []
+  const posts = props?.allNavPages ? props.allNavPages.reverse().slice(0, count) : []
   return (
     <>
       {/* 英雄区 */}
