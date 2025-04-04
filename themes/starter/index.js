@@ -304,15 +304,17 @@ const Layout404 = props => {
 const LayoutPostList = props => {
   const { posts: originalPosts, category, tag, currentPage = 1, postsPerPage = 6 } = props
   const posts = originalPosts ? [...originalPosts].reverse() : []
-  
+
   const slotTitle = category || tag
   const totalPosts = posts.length
   const totalPages = Math.ceil(totalPosts / postsPerPage)
 
+  const router = useRouter()
+
   const handlePageChange = (page) => {
     if (page < 1 || page > totalPages) return
-    // Update the current page in the URL or use router to push
-    // Use something like: router.push(`/posts?page=${page}`)
+    // Update the current page in the URL using the router
+    router.push(`/page/${page}`)
   }
 
   const displayedPosts = posts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage)
