@@ -247,7 +247,8 @@ const LayoutSearch = props => {
 const LayoutArchive = props => (
   <>
     {/* 博文列表 */}
-    <Blog {...props} />
+    <Blog {...props} posts={props.posts ? [...props.posts].reverse() : []} />
+
   </>
 )
 
@@ -302,7 +303,9 @@ const Layout404 = props => {
  * 翻页博客列表
  */
 const LayoutPostList = props => {
-  const { posts, category, tag } = props
+  const { posts: originalPosts, category, tag } = props
+  const posts = originalPosts ? [...originalPosts].reverse() : []
+
   const slotTitle = category || tag
 
   return (
