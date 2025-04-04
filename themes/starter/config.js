@@ -69,7 +69,7 @@ const CONFIG = {
   STARTER_ABOUT_IMAGE_1: '/images/starter/about/about-image-01.jpg',
   STARTER_ABOUT_IMAGE_2: '/images/starter/about/about-image-02.jpg',
   STARTER_ABOUT_TIPS_1: '300+',
-  STARTER_ABOUT_TIPS_2: '博客站点',
+  STARTER_ABOUT_TIPS_2: '学生就业',
   STARTER_ABOUT_TIPS_3: '优质就业',
 
   // 首页价格区块
