@@ -297,16 +297,16 @@ const CONFIG = {
   // 页脚三列菜单组
   STARTER_FOOTER_LINK_GROUP: [
     {
-      TITLE: '关于我们',
+      TITLE: '',
       LINK_GROUP: [
-        { TITLE: '官方主页', URL: '/#home' },
+        { TITLE: '', URL: '/#home' },
         { TITLE: '', URL: '' },
         {
-          TITLE: '帮助支持',
+          TITLE: '',
           URL: ''
         },
         {
-          TITLE: '合作申请',
+          TITLE: '',
           URL: ''
         }
       ]
