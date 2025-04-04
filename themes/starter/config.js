@@ -10,8 +10,8 @@ const CONFIG = {
 
   // 英雄区块导航
   STARTER_HERO_ENABLE: true, // 开启英雄区
-  STARTER_HERO_TITLE_1: '新氧气科技，点亮学生求知路，开启职场新征途', // 英雄区文字
-  STARTER_HERO_TITLE_2: '通知识滋养，就业保障', // 英雄区文字
+  STARTER_HERO_TITLE_1: '点亮学生求知路，开启职场新征途', // 英雄区文字
+  STARTER_HERO_TITLE_2: '知识滋养，就业保障', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   STARTER_HERO_BUTTON_1_TEXT: '策划案例查看', // 英雄区按钮
   STARTER_HERO_BUTTON_1_URL:
@@ -231,7 +231,7 @@ const CONFIG = {
 
   // 博客文章区块
   STARTER_BLOG_ENABLE: true, // 首页博文区块开关
-  STARTER_BLOG_TITLE: '我们的博客',
+  STARTER_BLOG_TITLE: '',
   STARTER_BLOG_COUNT: 3, // 首页博文区块默认展示前3篇文章
   STARTER_BLOG_TEXT_1: '最近的新闻',
   STARTER_BLOG_TEXT_2:
@@ -247,7 +247,7 @@ const CONFIG = {
   STARTER_CONTACT_EMAIL_TEXT: 'XXXX',
 
   // 嵌入外部表单
-  STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/yfctc7', // 基于NoteForm创建，将留言数据存在Notion中
+  STARTER_CONTACT_MSG_EXTERNAL_URL: '', // 基于NoteForm创建，将留言数据存在Notion中
   //   自定义留言表单，以下几个配置暂时废弃
   //   STARTER_CONTACT_MSG_TITLE: '向我们留言',
   //   STARTER_CONTACT_MSG_NAME: '姓名',
@@ -312,48 +312,48 @@ const CONFIG = {
       ]
     },
     {
-      TITLE: '功能特性',
+      TITLE: '',
       LINK_GROUP: [
         {
-          TITLE: '部署指南',
+          TITLE: '',
           URL: ''
         },
         {
-          TITLE: '升级指南',
+          TITLE: '',
           URL: ''
         },
-        { TITLE: '最新版本', URL: '' }
+        { TITLE: '', URL: '' }
       ]
     },
     {
-      TITLE: 'Notion写作',
+      TITLE: '',
       LINK_GROUP: [
         {
-          TITLE: 'Notion开始写作',
+          TITLE: '',
           URL: ''
         },
         {
-          TITLE: '快捷键提升效率',
+          TITLE: '',
           URL: ''
         },
         {
-          TITLE: '中国大陆使用Notion',
+          TITLE: '',
           URL: ''
         }
       ]
     }
   ],
 
-  STARTER_FOOTER_BLOG_LATEST_TITLE: '最新文章',
+  STARTER_FOOTER_BLOG_LATEST_TITLE: '',
 
   STARTER_FOOTER_PRIVACY_POLICY_TEXT: '隐私政策',
-  STARTER_FOOTER_PRIVACY_POLICY_URL: '/privacy-policy',
+  STARTER_FOOTER_PRIVACY_POLICY_URL: '',
 
   STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT: '法律声明',
-  STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_URL: '/legacy-notice',
+  STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_URL: '',
 
   STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT: '服务协议',
-  STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_URL: '/terms-of-use',
+  STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_URL: '',
 
   // 404页面的提示语
   STARTER_404_TITLE: '我们似乎找不到您要找的页面。',
