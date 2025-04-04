@@ -136,7 +136,7 @@ const LayoutIndex = props => {
  * @returns
  */
 const LayoutSlug = props => {
-  const { post, lock, validPassword } = props
+  const { post, lock, validPassword } = props.reverse()
 
   // 如果 是 /article/[slug] 的文章路径则視情況进行重定向到另一个域名
   const router = useRouter()
@@ -244,7 +244,7 @@ const LayoutSearch = props => {
  * @param {*} props
  * @returns
  */
-const LayoutArchive = props => (
+const LayoutArchive = props.reverse() => (
   <>
     {/* 博文列表 */}
     <Blog {...props} />
@@ -302,7 +302,7 @@ const Layout404 = props => {
  * 翻页博客列表
  */
 const LayoutPostList = props => {
-  const { posts, category, tag } = props
+  const { posts, category, tag } = props.reverse()
   const slotTitle = category || tag
 
   return (
