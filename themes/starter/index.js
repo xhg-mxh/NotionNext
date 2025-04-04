@@ -302,22 +302,20 @@ const Layout404 = props => {
  * 翻页博客列表
  */
 const LayoutPostList = props => {
-  const { posts: originalPosts, category, tag, currentPage = 1, postsPerPage = 6 } = props
+  // 修改1：确保 posts 排序（最新文章在前）
+  const { posts: originalPosts, category, tag } = props
   const posts = originalPosts ? [...originalPosts].reverse() : []
-
+  
+  // 修改2：添加分页状态
+  const POSTS_PER_PAGE = 6 // 每页文章数
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+  
+  // 修改3：截取当前页文章
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE
+  const paginatedPosts = posts.slice(startIndex, startIndex + POSTS_PER_PAGE)
+  
   const slotTitle = category || tag
-  const totalPosts = posts.length
-  const totalPages = Math.ceil(totalPosts / postsPerPage)
-
-  const router = useRouter()
-
-  const handlePageChange = (page) => {
-    if (page < 1 || page > totalPages) return
-    // Update the current page in the URL using the router
-    router.push(`/page/${page}`)
-  }
-
-  const displayedPosts = posts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage)
 
   return (
     <>
@@ -352,9 +350,9 @@ const LayoutPostList = props => {
               </div>
             </div>
           </div>
-          {/* 博客列表 此处优先展示分页后的文章 */}
+          {/* 博客列表，此处展示分页后的文章 */}
           <div className='-mx-4 flex flex-wrap'>
-            {displayedPosts?.map((item, index) => {
+            {paginatedPosts?.map((item, index) => {
               return (
                 <div key={index} className='w-full px-4 md:w-1/2 lg:w-1/3'>
                   <div
@@ -389,20 +387,20 @@ const LayoutPostList = props => {
               )
             })}
           </div>
-          {/* 翻页按钮 */}
-          <div className="flex justify-center mt-6">
+          {/* 修改4：添加分页按钮 */}
+          <div className='mt-8 flex justify-center'>
             <button
-              className="px-4 py-2 bg-primary text-white rounded-md"
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage <= 1}>
-              Previous
+              className='mx-2 px-4 py-2 bg-gray-300 rounded disabled:opacity-50'
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage(currentPage - 1)}>
+              上一页
             </button>
-            <span className="mx-4">{currentPage} / {totalPages}</span>
+            <span className='mx-2 text-lg'>{currentPage} / {totalPages}</span>
             <button
-              className="px-4 py-2 bg-primary text-white rounded-md"
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage >= totalPages}>
-              Next
+              className='mx-2 px-4 py-2 bg-gray-300 rounded disabled:opacity-50'
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage(currentPage + 1)}>
+              下一页
             </button>
           </div>
         </div>
@@ -411,7 +409,6 @@ const LayoutPostList = props => {
     </>
   )
 }
-
 /**
  * 分类列表
  * @param {*} props
