@@ -204,28 +204,28 @@ const CONFIG = {
   STARTER_TEAM_TEXT_2:
     '新氧气由众多开源技术爱好者们共同合作完成，感谢每一位贡献者',
 
-  // 这里不支持CONFIG和环境变量，需要一一修改此处代码。
+  // 这里不支持CONFIG和环境变量，需要一一修改此处代码。Team介绍
   STARTER_TEAM_ITEMS: [
     {
       STARTER_TEAM_ITEM_AVATAR:
-        'https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa06c61bb-980e-4180-bc18-c15f92c78bb4%2Ftangly1024.jpg?table=collection&id=8e7acf17-de09-4fa1-abde-b5b80ad4a813&t=8e7acf17-de09-4fa1-abde-b5b80ad4a813&width=100&cache=v2',
-      STARTER_TEAM_ITEM_NICKNAME: '冯老师',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Developer'
+        '',
+      STARTER_TEAM_ITEM_NICKNAME: '',
+      STARTER_TEAM_ITEM_DESCRIPTION: ''
     },
     {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-01.png',
-      STARTER_TEAM_ITEM_NICKNAME: '马老师',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Marketing Expert'
+      STARTER_TEAM_ITEM_AVATAR: '',
+      STARTER_TEAM_ITEM_NICKNAME: '',
+      STARTER_TEAM_ITEM_DESCRIPTION: ''
     },
     {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-02.png',
-      STARTER_TEAM_ITEM_NICKNAME: '陈老师',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Digital Marketer'
+      STARTER_TEAM_ITEM_AVATAR: '',
+      STARTER_TEAM_ITEM_NICKNAME: '',
+      STARTER_TEAM_ITEM_DESCRIPTION: ''
     },
     {
-      STARTER_TEAM_ITEM_AVATAR: '/images/starter/team/team-03.png',
-      STARTER_TEAM_ITEM_NICKNAME: '王老师',
-      STARTER_TEAM_ITEM_DESCRIPTION: 'Creative Designer'
+      STARTER_TEAM_ITEM_AVATAR: '',
+      STARTER_TEAM_ITEM_NICKNAME: '',
+      STARTER_TEAM_ITEM_DESCRIPTION: ''
     }
   ],
 
