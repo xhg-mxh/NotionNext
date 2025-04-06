@@ -51,10 +51,10 @@ const CONFIG = {
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: '/about',
   HEO_INFO_CARD_ICON1: 'fas fa-user',
-  HEO_INFO_CARD_URL2: 'https://project.newoxygenit.tech',
+  HEO_INFO_CARD_URL2: 'https://project.newoxygenit.tech/github',
   HEO_INFO_CARD_ICON2: 'fab fa-github',
-  HEO_INFO_CARD_URL3: 'https://project.newoxygenit.tech',
-  HEO_INFO_CARD_TEXT3: '了解更多',
+  HEO_INFO_CARD_URL3: 'https://project.newoxygenit.tech/github',
+  HEO_INFO_CARD_TEXT3: '项目获取',
 
   // 用户技能图标
   HEO_GROUP_ICONS: [
@@ -120,7 +120,7 @@ const CONFIG = {
   HEO_SOCIAL_CARD_TITLE_1: '交流频道',
   HEO_SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
   HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
-  HEO_SOCIAL_CARD_URL: 'https://project.newoxygenit.tech',
+  HEO_SOCIAL_CARD_URL: 'https://project.newoxygenit.tech/jiaoliu',
 
   // 底部统计面板文案
   HEO_POST_COUNT_TITLE: '文章数:',
