@@ -37,9 +37,9 @@ const Header = props => {
       const scrollS = window.scrollY
       // 导航栏设置 白色背景
       if (scrollS <= 1) {
-        setFixedNav(false)
-        setBgWhite(false)
-        setTextWhite(false)
+        setFixedNav(true)
+        setBgWhite(true)
+        setTextWhite(true)
 
         // 文章详情页特殊处理
         if (document?.querySelector('#post-bg')) {
