@@ -37,8 +37,8 @@ const Header = props => {
       const scrollS = window.scrollY
       // 导航栏设置 白色背景
       if (scrollS <= 1) {
-        setFixedNav(true)
-        setBgWhite(true)
+        setFixedNav(false)
+        setBgWhite(false)
         setTextWhite(false)
 
         // 文章详情页特殊处理
@@ -70,13 +70,13 @@ const Header = props => {
   useEffect(() => {
     let prevScrollY = 0
     let ticking = false
-
+    setActiveIndex(0)
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY
           if (currentScrollY > prevScrollY) {
-            setActiveIndex(1) // 向下滚动时设置activeIndex为1
+            setActiveIndex(0) // 向下滚动时设置activeIndex为1
           } else {
             setActiveIndex(0) // 向上滚动时设置activeIndex为0
           }
