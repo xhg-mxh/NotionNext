@@ -39,7 +39,7 @@ const Header = props => {
       if (scrollS <= 1) {
         setFixedNav(true)
         setBgWhite(true)
-        setTextWhite(true)
+        setTextWhite(false)
 
         // 文章详情页特殊处理
         if (document?.querySelector('#post-bg')) {
