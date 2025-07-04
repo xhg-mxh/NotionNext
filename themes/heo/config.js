@@ -8,7 +8,7 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到崇远科技', url: 'https://project.newoxygenit.tech/welcome' },
+    { title: '欢迎来到官网', url: 'https://project.newoxygenit.tech/welcome' },
     { title: '访问文档中心获取更多帮助', url: 'https://project.newoxygenit.tech/docs' }
   ],
 
@@ -22,7 +22,7 @@ const CONFIG = {
   HEO_HERO_TITLE_2: '与编程',
   HEO_HERO_TITLE_3: 'project.newoxygenit.tech',
   HEO_HERO_TITLE_4: '新版上线',
-  HEO_HERO_TITLE_5: '崇远轻松定制项目',
+  HEO_HERO_TITLE_5: '轻松定制项目',
   HEO_HERO_TITLE_LINK: 'https://project.newoxygenit.tech',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: '随便逛逛',
